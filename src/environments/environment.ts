@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serverUrl: 'localhost:3000',
+  serverUrl: 'http://0.0.0.0:9000',
   accessToken: 'PbP5ZWj1BtFFaKzVJMkU9bgKYZVHHLPG'
 };
 

@@ -21,9 +21,9 @@ export class AuthService {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': `Basic ${btoa(loginAuthorization)}`,
+        'Authorization': `Basic ${loginAuthorization}`,
       })
     }
-    return this.httpClient.post<ILoginOutput>(urlRequest, httpOptions);
+    return this.httpClient.post<ILoginOutput>(urlRequest, {}, httpOptions);
   }
 }
