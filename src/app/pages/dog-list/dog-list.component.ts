@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DogsService } from 'src/app/services/dogs/dogs.service';
+import { IDog } from 'src/app/interfaces/dog.interface';
 
 @Component({
   selector: 'app-dog-list',
@@ -7,7 +8,7 @@ import { DogsService } from 'src/app/services/dogs/dogs.service';
   styleUrls: ['./dog-list.component.css']
 })
 export class DogListComponent implements OnInit {
-  dogList: any;
+  dogList: IDog;
 
   constructor(
     private dogsService: DogsService
