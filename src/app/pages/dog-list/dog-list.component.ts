@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DogsService } from 'src/app/services/dogs/dogs.service';
-import { IDog } from 'src/app/interfaces/dog.interface';
 
 @Component({
   selector: 'app-dog-list',
@@ -8,7 +7,8 @@ import { IDog } from 'src/app/interfaces/dog.interface';
   styleUrls: ['./dog-list.component.css']
 })
 export class DogListComponent implements OnInit {
-  dogList: IDog;
+  // dogList: IDog;
+  newList: Array<any>;
 
   constructor(
     private dogsService: DogsService
@@ -21,8 +21,19 @@ export class DogListComponent implements OnInit {
   getAllDogs() {
     this.dogsService.getAll()
       .subscribe((res) => {
-        this.dogList = res.rows;
+        const list = [];
+        res.rows.forEach(el => {
+          list.push(
+            {
+              title: el.name,
+              description: el.size,
+              link: `/dog/${el.id}`
+            }
+          )
+        });
+        this.newList = list;
       })
   }
 
+  
 }
