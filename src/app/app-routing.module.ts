@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DogListComponent } from './pages/dog-list/dog-list.component';
+import { AddDogComponent } from './pages/add-dog/add-dog.component';
+import { AuthGuardService } from './services/auth-guard/auth-guard.service';
 
 
 const routes: Routes = [
@@ -17,6 +19,11 @@ const routes: Routes = [
   {
     path: 'dog-list',
     component: DogListComponent
+  },
+  {
+    path: 'add-dog',
+    component: AddDogComponent,
+    canActivate: [AuthGuardService]
   },
 ];
 

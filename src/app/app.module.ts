@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './pages/home/home.module';
 import { LoginModule } from './pages/login/login.module';
 import { DogListModule } from './pages/dog-list/dog-list.module';
+import { AddDogModule } from './pages/add-dog/add-dog.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DogListModule } from './pages/dog-list/dog-list.module';
     }),
     HomeModule,
     LoginModule,
-    DogListModule
+    DogListModule,
+    AddDogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
