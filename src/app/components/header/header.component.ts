@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Menu } from 'src/app/interfaces/menu.interface';
+import { IUser } from 'src/app/interfaces/user.interface';
 
 @Component({
   selector: 'app-header',
@@ -16,11 +17,17 @@ export class HeaderComponent implements OnInit {
   }
 
   setMenuByProfile() {
-    const userData = { role: 'dogwalker' };
-    if (userData.role === 'dogwalker') {
-      this.setMenuDogwalker();
-    } else {
-      this.setMenuClient();
+    const userData = localStorage.getItem('user');
+    const userRole = userData ? JSON.parse(userData).role : '';
+
+    switch (userRole) {
+      case 'dogwalker':
+        this.setMenuDogwalker();
+        break;
+    
+      default:
+        this.setMenuClient();
+        break;
     }
   }
 
