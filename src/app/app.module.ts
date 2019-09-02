@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { JwtModule } from '@auth0/angular-jwt';
 
+import { jwtTokenGetter } from './helpers/token';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './pages/home/home.module';
 import { LoginModule } from './pages/login/login.module';
-import { HttpClientModule } from '@angular/common/http';
 import { DogListComponent } from './pages/dog-list/dog-list.component';
 
 @NgModule({
@@ -17,6 +19,11 @@ import { DogListComponent } from './pages/dog-list/dog-list.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: jwtTokenGetter
+      }
+    }),
     HomeModule,
     LoginModule
   ],
