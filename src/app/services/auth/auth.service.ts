@@ -11,7 +11,6 @@ import { jwtTokenGetter } from 'src/app/helpers/token';
 })
 export class AuthService {
   private serverUrl = environment.serverUrl;
-  private accessToken = environment.accessToken;
 
   constructor(
     private httpClient : HttpClient,
@@ -19,14 +18,14 @@ export class AuthService {
   ) { }
 
   login(user: ILoginInput): Observable<ILoginOutput> {
-    const urlRequest = `${this.serverUrl}/auth?access_token=${this.accessToken}`;
+    const urlRequest = `${this.serverUrl}/auth`;
     const loginAuthorization = btoa(`${user.email}:${user.password}`);
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': `Basic ${loginAuthorization}`,
       })
-    }
+    };
     return this.httpClient.post<ILoginOutput>(urlRequest, {}, httpOptions);
   }
 
