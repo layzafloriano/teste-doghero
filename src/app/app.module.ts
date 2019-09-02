@@ -9,12 +9,11 @@ import { Interceptor } from './interceptor.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './pages/home/home.module';
 import { LoginModule } from './pages/login/login.module';
-import { DogListComponent } from './pages/dog-list/dog-list.component';
+import { DogListModule } from './pages/dog-list/dog-list.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DogListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +26,8 @@ import { DogListComponent } from './pages/dog-list/dog-list.component';
       }
     }),
     HomeModule,
-    LoginModule
+    LoginModule,
+    DogListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
