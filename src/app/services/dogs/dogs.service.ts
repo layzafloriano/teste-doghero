@@ -15,4 +15,9 @@ export class DogsService {
     const urlRequest = `${this.serverUrl}/pets`;
     return this.httpClient.get<any>(urlRequest);
   }
+
+  add(data) {
+    const urlRequest = `${this.serverUrl}/pets`;
+    return this.httpClient.post<any>(urlRequest, data)
+  }
 }
