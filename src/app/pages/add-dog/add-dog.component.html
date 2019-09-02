@@ -13,7 +13,7 @@
         class="form-control"
         id="name"
         required>
-        <!-- <app-control-message [control]="loginForm.get('email')"></app-control-message> -->
+        <app-control-message [control]="dogsForm.get('name')"></app-control-message>
     </div>
 
     <div class="form-group">
@@ -24,13 +24,17 @@
         class="form-control"
         id="age"
         required>
-        <!-- <app-control-message [control]="loginForm.get('password')"></app-control-message> -->
+        <app-control-message [control]="dogsForm.get('age')"></app-control-message>
     </div>
 
-    <select class="form-control" id="ageGroup" formControlName="ageGroup">
-      <option value="year">Year</option>
-      <option value="month">Month</option>
-    </select>
+    <div class="form-group">
+      <select class="form-control" id="ageGroup" formControlName="ageGroup">
+          <option value="year">Year</option>
+          <option value="month">Month</option>
+        </select>
+        <app-control-message [control]="dogsForm.get('ageGroup')"></app-control-message>
+    </div>
+    
 
     <div class="form-group">
       <label for="age">Size</label>
@@ -41,6 +45,7 @@
           <option value="large">Large</option>
           <option value="extralarge">Extra Large</option>
         </select>
+        <app-control-message [control]="dogsForm.get('size')"></app-control-message>
     </div>
 
     <button type="submit" [disabled]="!dogsForm.valid" class="btn btn-primary">Submit</button>
