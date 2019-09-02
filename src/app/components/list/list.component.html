@@ -1,7 +1,5 @@
-<p>list works!</p>
-
 <ol>
-  <li *ngFor="let item of list">
-    {{item.name}}
+  <li *ngFor="let item of list" class="mb-3">
+    <app-card-list [title]="item.name" [description]="item.name" [link]="item.name"></app-card-list>
   </li>
 </ol>

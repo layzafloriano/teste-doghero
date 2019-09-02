@@ -4,11 +4,12 @@ import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { ControlMessageComponent } from './control-message/control-message.component';
 import { ListComponent } from './list/list.component';
+import { CardListComponent } from './card-list/card-list.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, ControlMessageComponent, ListComponent],
+  declarations: [HeaderComponent, ControlMessageComponent, ListComponent, CardListComponent],
   imports: [
     CommonModule,
     RouterModule
@@ -16,7 +17,8 @@ import { ListComponent } from './list/list.component';
   exports: [
     HeaderComponent,
     ControlMessageComponent,
-    ListComponent
+    ListComponent,
+    CardListComponent,
   ]
 })
 export class ComponentsModule { }
