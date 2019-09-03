@@ -1,0 +1,9 @@
+.navbar {
+  background-color: #EF3A5D;
+}
+.navbar a{
+  color: #FFFFFF;
+}
+.navbar a:hover {
+  color: #63656A;
+}
