@@ -17,7 +17,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'dog-list',
+    path: 'dogs',
     component: DogListComponent
   },
   {
