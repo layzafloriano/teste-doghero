@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import {Router} from "@angular/router"
 import { DogsService } from 'src/app/services/dogs/dogs.service';
 
 @Component({
@@ -16,6 +17,7 @@ export class AddDogComponent implements OnInit {
     // ownerID: ['']
   });
   constructor(
+    private router: Router,
     private fb: FormBuilder,
     private dogsService: DogsService
   ) { }
@@ -27,7 +29,8 @@ export class AddDogComponent implements OnInit {
     console.log(this.dogsForm.value)
     this.dogsService.add(this.dogsForm.value)
       .subscribe((res)=> {
-        console.log()
+        // this.router.navigate(['/dog', res.id])
+        console.log(res)
       });
   }
 }
