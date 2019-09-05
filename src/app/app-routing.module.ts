@@ -6,6 +6,7 @@ import { DogListComponent } from './pages/dog-list/dog-list.component';
 import { AddDogComponent } from './pages/add-dog/add-dog.component';
 import { AuthGuardService } from './services/auth-guard/auth-guard.service';
 import { DogComponent } from './pages/dog/dog.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'signup',
+    component: SignupComponent
+  },
+  {
     path: 'dogs',
     component: DogListComponent
   },
@@ -28,7 +33,8 @@ const routes: Routes = [
   },
   {
     path: 'dog/:id',
-    component: DogComponent },
+    component: DogComponent
+  },
 ];
 
 @NgModule({

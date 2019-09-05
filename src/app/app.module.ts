@@ -12,6 +12,7 @@ import { LoginModule } from './pages/login/login.module';
 import { DogListModule } from './pages/dog-list/dog-list.module';
 import { AddDogModule } from './pages/add-dog/add-dog.module';
 import { DogModule } from './pages/dog/dog.module';
+import { SignupModule } from './pages/signup/signup.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DogModule } from './pages/dog/dog.module';
     LoginModule,
     DogListModule,
     AddDogModule,
-    DogModule
+    DogModule,
+    SignupModule
   ],
   providers: [],
   bootstrap: [AppComponent]
