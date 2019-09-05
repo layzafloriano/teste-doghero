@@ -24,9 +24,11 @@ export class HeaderComponent implements OnInit {
       case 'dogwalker':
         this.setMenuDogwalker();
         break;
-    
-      default:
+      case 'client':
         this.setMenuClient();
+        break;
+      default:
+        this.setMenuOther();
         break;
     }
   }
@@ -59,6 +61,19 @@ export class HeaderComponent implements OnInit {
         path: '/dog-walkers',
       },
     ];
+  }
+
+  setMenuOther() {
+    this.menu = [
+      {
+        text: 'Login',
+        path: '/login',
+      },
+      {
+        text: 'Signup',
+        path: '/signup',
+      }
+    ]
   }
 
 }
