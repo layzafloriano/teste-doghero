@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { DogListComponent } from './pages/dog-list/dog-list.component';
 import { AddDogComponent } from './pages/add-dog/add-dog.component';
 import { AuthGuardService } from './services/auth-guard/auth-guard.service';
+import { DogComponent } from './pages/dog/dog.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,9 @@ const routes: Routes = [
     component: AddDogComponent,
     canActivate: [AuthGuardService]
   },
+  {
+    path: 'dog/:id',
+    component: DogComponent },
 ];
 
 @NgModule({
