@@ -11,6 +11,8 @@ import { HomeModule } from './pages/home/home.module';
 import { LoginModule } from './pages/login/login.module';
 import { DogListModule } from './pages/dog-list/dog-list.module';
 import { AddDogModule } from './pages/add-dog/add-dog.module';
+import { DogModule } from './pages/dog/dog.module';
+import { SignupModule } from './pages/signup/signup.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { AddDogModule } from './pages/add-dog/add-dog.module';
     HomeModule,
     LoginModule,
     DogListModule,
-    AddDogModule
+    AddDogModule,
+    DogModule,
+    SignupModule
   ],
   providers: [],
   bootstrap: [AppComponent]

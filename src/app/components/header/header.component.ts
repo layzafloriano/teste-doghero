@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
       case 'dogwalker':
         this.setMenuDogwalker();
         break;
-      case 'client':
+      case 'user':
         this.setMenuClient();
         break;
       default:
@@ -59,6 +59,10 @@ export class HeaderComponent implements OnInit {
       {
         text: 'Dog Walkers',
         path: '/dog-walkers',
+      },
+      {
+        text: 'Add Dog',
+        path: '/add-dog',
       },
     ];
   }

@@ -29,6 +29,18 @@ export class AuthService {
     return this.httpClient.post<ILoginOutput>(urlRequest, {}, httpOptions);
   }
 
+  // signup() {
+  //   const urlRequest = `${this.serverUrl}/user`;
+  //   const loginAuthorization = btoa(`${user.email}:${user.password}`);
+  //   const httpOptions = {
+  //     headers: new HttpHeaders({
+  //       'Content-Type': 'application/json',
+  //       'Authorization': `Basic ${loginAuthorization}`,
+  //     })
+  //   };
+  //   return this.httpClient.post<ILoginOutput>(urlRequest, {}, httpOptions);
+  // }
+
   isAuthenticated(): boolean {
     const token = jwtTokenGetter();
     return !this.jwtHelper.isTokenExpired(token);

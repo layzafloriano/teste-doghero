@@ -22,6 +22,7 @@ export class DogsService {
   }
 
   getById(id) {
-
+    const urlRequest = `${this.serverUrl}/pets/${id}`;
+    return this.httpClient.get<any>(urlRequest);
   }
 }

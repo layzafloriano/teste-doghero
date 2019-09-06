@@ -1,1 +1,9 @@
-<p>dog works!</p>
+<app-header></app-header>
+<div class="card mx-auto mt-4" style="width: 25rem;">
+  <img src="../../../assets/images/dog.png" class="card-img-top" alt="dog">
+  <div class="card-body">
+    <h5 class="card-title">{{ dog.name }}</h5>
+    <p class="card-text">Age: {{ dog.age}} {{dog.ageGroup}}(s)</p>
+    <p>Size: {{ dog.size }}</p>
+  </div>
+</div>
